@@ -12,6 +12,7 @@ const config = {
     appId: "1:1030887827136:web:630a655019075e3aa3ef25",
     measurementId: "G-GNEFYSRJEC"
 };
+firebase.initializeApp(config);
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
     if (!userAuth) return;
@@ -35,12 +36,10 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
         }
     }
 
-    console.log(snapShot.data());
+    // console.log(snapShot.data());
     return userRef;
 }
 
-
-firebase.initializeApp(config);
 
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
