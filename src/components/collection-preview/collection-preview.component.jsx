@@ -6,7 +6,9 @@ import { Link } from 'react-router-dom';
 
 const CollectionPreview = ({ title, items, history }) => (
     <div className='collection'>
-        <Link to={`/shop/${title.toLowerCase()}`}><h1 className='title'>{title.toUpperCase()}</h1></Link>
+        <Link to={`/shop/${title.toLowerCase()}`}>
+            <h1 className='title'>{title.toUpperCase()}</h1>
+        </Link>
         <div className='preview'>
             {items
                 .filter((item, i) => i < 4)
