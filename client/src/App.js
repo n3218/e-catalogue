@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
-import './App.css';
 import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop/shop.component'
 import Header from './components/header/header.component';
@@ -11,16 +10,17 @@ import { selectCurrentUser } from './redux/user/user.selectors';
 import CheckoutPage from './pages/checkout/checkout.component';
 import addDataToFirebase from './firebase/addDataToFirebase';
 import { checkUserSession } from './redux/user/user.actions'
+import { GlobalStyle } from './global.styles';
 
 
 const App = ({ checkUserSession, currentUser }) => {
-
   useEffect(() => {
     checkUserSession()
-  },[checkUserSession])
+  }, [checkUserSession])
 
   return (
     <div>
+      <GlobalStyle />
       <Header />
       <Switch>
         <Route exact path='/adddata' component={addDataToFirebase} />

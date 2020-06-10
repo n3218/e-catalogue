@@ -1,5 +1,8 @@
 .checkout-page {
   width: 55%;
+  @media screen and (max-width: 800px) {
+    width: 100%;
+  }
   min-height: 90vh;
   display: flex;
   flex-direction: column;
@@ -18,7 +21,8 @@
       width: 23%;
 
       &:last-child {
-        width: 8%;
+        width: 12%;
+        text-align: right;
       }
     }
   }
