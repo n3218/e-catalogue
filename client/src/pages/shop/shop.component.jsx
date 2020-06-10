@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import CollectionPageContainer from '../collection/collection.container';
 import { fetchCollectionsStart } from '../../redux/shop/shop.actions';
 import CollectionOverviewContainer from '../../components/collections-overview/collection-overview.container';
-
+import './shop.styles.scss';
 
 const ShopPage = ({ fetchCollectionsStart, match }) => {
     useEffect(() => {

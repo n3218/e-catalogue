@@ -9,7 +9,7 @@ const CollectionPreview = ({ title, items, history }) => (
         <Link to={`/shop/${title.toLowerCase()}`}>
             <h1 className='title'>{title.toUpperCase()}</h1>
         </Link>
-        <div className='preview'>
+        <div className='items-container'>
             {items
                 .filter((item, i) => i < 4)
                 .map((item) =>
