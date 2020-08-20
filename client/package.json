@@ -28,7 +28,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && sw-precache --config=sw-precache0config.js",
+    "build": "react-scripts build && sw-precache --config=sw-precache-config.js",
     "gh-pages": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
