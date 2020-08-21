@@ -19,8 +19,8 @@ ReactDOM.render(
   document.getElementById("root")
 )
 
-if (process.env.NODE_ENV === "development") {
-  serviceWorker.unregister()
-} else {
-  serviceWorker.register()
-}
+// if (process.env.NODE_ENV === "development") {
+//   serviceWorker.unregister()
+// } else {
+//   serviceWorker.register()
+// }
