@@ -18,7 +18,7 @@ const Header = ({ currentUser, hidden, signOutStart }) => {
         </CurrentUserName>
       ) : null}
       <LogoContainer to="/">
-        <img src="/blossom.png" alt="E-catalog logo" width="80" />
+        <img src="/logo192x192.png" title="E-Catalog Logo" width="80" />
       </LogoContainer>
       <OptionContainer>
         <OptionLink to="/shop">SHOP</OptionLink>
