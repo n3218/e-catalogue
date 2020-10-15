@@ -9,8 +9,8 @@ import Spinner from "./components/spinner/spinner.component"
 import ErrorBoundary from "./components/error-boundary/error-boundary.component"
 import "./app.scss"
 
-const HomePage = lazy(() => import("./pages/homepage/homepage.component"))
-const ShopPage = lazy(() => import("./pages/shop/shop.component"))
+import HomePage from "./pages/homepage/homepage.component"
+import ShopPage from "./pages/shop/shop.component"
 const CheckoutPage = lazy(() => import("./pages/checkout/checkout.component"))
 const SignInAndSignUpPage = lazy(() => import("./pages/sign-in-sign-up/sign-in-sign-up.component"))
 
@@ -24,9 +24,9 @@ const App = ({ checkUserSession, currentUser }) => {
       <Header />
       <Switch>
         <ErrorBoundary>
+          <Route exact path="/" component={HomePage} />
+          <Route path="/shop" component={ShopPage} />
           <Suspense fallback={<Spinner />}>
-            <Route exact path="/" component={HomePage} />
-            <Route path="/shop" component={ShopPage} />
             <Route exact path="/checkout" component={CheckoutPage} />
             <Route exact path="/signin" render={() => (currentUser ? <Redirect to="/" /> : <SignInAndSignUpPage />)} />
           </Suspense>
